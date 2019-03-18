@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "-";
+var prefix = "$";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : EX Clan`);
@@ -13,7 +13,7 @@ client.user.setStatus("dnd")
 });
 
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "$";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
@@ -43,7 +43,7 @@ client.on("message", message => {
 
 
 const developers = ["428583403961450537,57011113099289]
-const adminprefix = "-";
+const adminprefix = "$";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
